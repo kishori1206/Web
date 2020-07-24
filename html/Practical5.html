@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        #img1{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+           
+        }
+        
+        #img2{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            outline: none;
+            border: 0;
+            
+        }
+        h2{
+            color:white;
+            text-align: center;
+        }
+        h3{
+            color:red;
+            text-align: center;
+        }
+        
+        body{
+            background-color: rgba(30, 41, 196, 0.199);
+        }
+    </style>
+</head>
+<body>
+
+
+    <img src="../images/menubar.png"  id ="img1"usemap="#menu">
+    <map id=#menu name=#menu>
+
+        <area href="../index.html" shape="rect" coords="21,28,155,68" >
+
+        <area href="practical1.htm" shape="rect" coords="192,28,326,70" >
+
+        <area href="practical2.htm" shape="rect" coords="354,29,492,71">
+
+        <area href="practical3.html" shape="rect" coords="522,30,652,70" >
+
+        <area href="practical4.htm" shape="rect" coords="695,30,831,71" >
+
+        <area href="Practical5.html" shape="rect"coords="863,29,997,71" target="_blank">
+
+    </map>
+
+   
+    <h2>Intorduction to Front-End Technologies</h2>
+    <img src="../images/Practical-5.jpg" alt="Fullstack Menu"  id="img2"
+    usemap="#map1">
+    <map name="map1">
+
+        <area href="IntroTohtml.htm" shape="rect" coords="26,11,173,170" alt="introduction to html" 
+        target="_blank">
+
+        <area href="CSSIntro.htm" shape="circle" coords="288,100,92" alt="introduction to css" 
+        target="_blank">
+
+        <area href="JavscriptIntro.htm" shape="rect" coords="30,204,175,345" alt="Intorduction to Javascript"
+        target="_blank">
+
+        <area href="Bootstap.html" shape="poly" coords="287,201,348,224,336,298,287,324,239,298,233,225"
+        alt="Intorduction to Bootstap" target="_blank">
+    </map>
+    <h3>click on any part of logo to know more about these Technologies</h3>
+    
+</body>
+</html>
