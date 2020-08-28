@@ -1,0 +1,1448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>Practical9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #container {
+            width: 1200px;
+            padding: 15px;
+            margin: 0px auto;
+            /*border: solid blue;*/
+        }
+
+
+
+        #header h2 {
+            float: left;
+            text-transform: uppercase;
+            line-height: 70px;
+            color: aliceblue;
+        }
+
+
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+            padding: 0 20px;
+            margin-bottom: 15px;
+
+
+
+            position: sticky;
+            top: 0;
+
+
+        }
+
+        #header #menu {
+
+
+            float: right;
+            list-style: none;
+
+        }
+
+        #menu li {
+            display: inline-block;
+            line-height: 70px;
+        }
+
+
+
+        #menu li a {
+            display: block;
+            text-decoration: none;
+            color: azure;
+            text-decoration: none;
+            padding: 0px 20px;
+            transition: .4s;
+            font-size: 20px;
+
+
+        }
+
+
+
+        #menu li a:hover,
+        .show-btn:hover,
+        .hide-btn:hover {
+            color: rgb(95, 179, 202);
+
+        }
+
+
+        .show-btn,
+        .hide-btn {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+            display: none;
+            transition: .4s;
+        }
+
+
+        .show-btn {
+            float: right;
+        }
+
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+
+        }
+
+
+        /*#header a {
+
+            display: block;
+            background-color: black;
+
+            height: 40px;
+
+            font-size: large;
+            color: seashell;
+
+            padding-right: 50px;
+            padding-left: 50px;
+            margin-right: 1px;
+
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        #header a:hover {
+            background-color: rgb(89, 84, 94);
+        }*/
+
+
+
+        #banner {
+            width: 100%;
+            height: 600px;
+            background-image: url(../img/laptop1.jpg);
+            background-size: cover;
+
+            margin-bottom: 15px;
+
+
+            font-size: 40px;
+            color: white;
+        }
+
+        #banner h2 {
+            margin: 20px;
+
+
+        }
+
+        #s1 {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 15px;
+        }
+
+
+
+        .img1 img {
+
+
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            float: left;
+            margin-left: 40px;
+
+
+        }
+
+        #s2 {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 15px;
+
+
+        }
+
+        #left-side {
+            width: 49%;
+            height: 400px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-right: 15px;
+            background-color: rgb(119, 114, 114);
+            float: left;
+
+            color: white;
+
+        }
+
+        .left-content {
+            width: 100%;
+            height: 400px;
+
+        }
+
+        #left-p {
+            width: 100%;
+            height: 400px;
+            font-size: 20px;
+            text-align: justify;
+            padding-top: 15px;
+
+
+        }
+
+        #right-side {
+            width: 49%;
+            height: 400px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            float: right;
+
+        }
+
+        .article {
+            background-size: 100% 123px;
+            width: 100%;
+            height: 123px;
+            margin-bottom: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: top;
+
+            font-size: 40px;
+            color: aqua;
+
+        }
+
+        #p1 {
+            background-image: url(../img/project1.jpg);
+
+        }
+
+        #p2 {
+            background-image: url(../img/project2.jpg);
+
+        }
+
+        #p3 {
+            background-image: url(../img/project3.jpg);
+
+        }
+
+        #s3 {
+            width: 100%;
+            height: 320px;
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+        .box {
+            width: 22%;
+            height: 370px;
+
+            background-color: rgb(199, 196, 191);
+            margin-bottom: 15px;
+            margin-top: 15px;
+            float: left;
+            margin-left: 30px;
+
+        }
+
+
+
+
+        .box h2 {
+
+            font-size: medium;
+            font-style: normal;
+            text-align: center;
+        }
+
+
+        .box img {
+            border-radius: 10px;
+            margin-top: 20px;
+            height: 20vh;
+
+
+        }
+
+        .box p {
+
+            padding-left: 30px;
+            padding-right: 30px;
+
+
+        }
+
+        .box a {
+            display: block;
+            background-color: red;
+            width: 80%;
+            height: 30px;
+            border-radius: 10px;
+            font-size: large;
+            color: seashell;
+            border: 0;
+            text-align: center;
+            padding-top: 5px;
+            margin: 20px auto;
+            text-decoration: none;
+
+        }
+
+        .box a:hover {
+            background-color: indigo;
+        }
+
+
+        #list {
+
+            width: 100%;
+            height: 100px;
+            background-color: plum;
+            margin-top: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            color: black;
+
+        }
+
+        #list ul {
+            list-style-type: none;
+
+        }
+
+        #f2 {
+            text-align: center;
+
+        }
+
+
+
+
+        @media(max-width: 1199px) {
+            #header h2 {
+                float: left;
+                text-transform: uppercase;
+                line-height: 70px;
+                color: aliceblue;
+            }
+
+
+
+            #header {
+                width: 100%;
+                height: 100px;
+                background-color: gray;
+                padding: 0 20px;
+                margin-bottom: 15px;
+
+
+
+                position: sticky;
+                top: 0;
+
+
+            }
+
+            #header #menu {
+
+
+                float: right;
+                list-style: none;
+
+            }
+
+            #menu li {
+                display: inline-block;
+                line-height: 70px;
+            }
+
+
+
+            #menu li a {
+                display: block;
+                text-decoration: none;
+                color: azure;
+                text-decoration: none;
+                padding: 0px 20px;
+                transition: .4s;
+                font-size: 20px;
+
+
+            }
+
+            #menu li a:hover,
+            .show-btn:hover,
+            .hide-btn:hover {
+                color: rgb(95, 179, 202);
+
+            }
+
+
+            .show-btn,
+            .hide-btn {
+                font-size: 30px;
+                color: white;
+                line-height: 70px;
+                display: none;
+                transition: .4s;
+            }
+
+
+            .show-btn {
+                float: right;
+            }
+
+
+            #chk {
+                position: absolute;
+                visibility: hidden;
+                z-index: -10;
+            }
+
+
+
+            #banner {
+                width: 100%;
+                height: 600px;
+                background-image: url(../img/laptop1.jpg);
+                background-size: cover;
+
+                margin-bottom: 15px;
+
+
+                font-size: 40px;
+                color: white;
+            }
+
+            #banner h2 {
+                margin: 20px;
+
+
+            }
+
+            #s1 {
+                width: 100%;
+                height: 520px;
+                margin-bottom: 15px;
+            }
+
+
+
+            .img1 img {
+
+
+                width: 500px;
+                height: 250px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                margin-left: 60px;
+
+
+            }
+
+
+
+            #s2 {
+                width: 100%;
+                height: 400px;
+                margin-bottom: 15px;
+
+
+            }
+
+            #left-side {
+                width: 49%;
+                height: 400px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-right: 15px;
+                background-color: rgb(119, 114, 114);
+                float: left;
+
+                color: white;
+
+            }
+
+            .left-content {
+                width: 100%;
+                height: 400px;
+
+            }
+
+            #left-p {
+                width: 100%;
+                height: 400px;
+                font-size: 20px;
+                text-align: justify;
+                padding-top: 15px;
+
+
+            }
+
+            #right-side {
+                width: 49%;
+                height: 400px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                float: right;
+
+            }
+
+            .article {
+                background-size: 100% 123px;
+                width: 100%;
+                height: 123px;
+                margin-bottom: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: top;
+
+                font-size: 40px;
+                color: aqua;
+
+            }
+
+            #p1 {
+                background-image: url(../img/project1.jpg);
+
+            }
+
+            #p2 {
+                background-image: url(../img/project2.jpg);
+
+            }
+
+            #p3 {
+                background-image: url(../img/project3.jpg);
+
+            }
+
+            #s3 {
+                width: 100%;
+                height: 620px;
+                margin-bottom: 15px;
+
+            }
+
+            .box {
+                width: 45%;
+                height: 600px;
+
+                background-color: rgb(199, 196, 191);
+                margin-bottom: 15px;
+                margin-top: 15px;
+                margin-left: 40px;
+
+
+            }
+
+
+
+
+            .box h2 {
+
+                font-size: 40px;
+                font-style: normal;
+                text-align: center;
+            }
+
+
+            .box img {
+                border-radius: 10px;
+                margin-top: 20px;
+                height: 30vh;
+
+
+            }
+
+            .box p {
+
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 30px;
+
+            }
+
+            .box a {
+                display: block;
+                background-color: red;
+                width: 80%;
+                height: 50px;
+                border-radius: 10px;
+                font-size: 30px;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-top: 5px;
+                margin: 20px auto;
+                text-decoration: none;
+
+            }
+
+            .box a:hover {
+                background-color: indigo;
+            }
+
+
+
+
+
+
+
+            #list {
+
+                width: 100%;
+                height: 100px;
+                background-color: plum;
+                margin-top: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 30px;
+                color: black;
+
+            }
+
+            #list ul {
+                list-style-type: none;
+
+            }
+
+            #f2 {
+                text-align: center;
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media(max-width: 800px) {
+            h1 {
+                color: black;
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .show-btn,
+            .hide-btn {
+                display: block;
+            }
+
+
+            #menu {
+
+                position: fixed;
+                top: 0;
+                right: -100%;
+
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                text-align: center;
+                padding: 80px 0;
+                transition: .7s;
+                line-height: normal;
+
+            }
+
+            #chk:checked~#menu {
+                right: 0;
+            }
+
+
+
+
+            #menu li {
+                display: block;
+
+            }
+
+            #menu li a {
+                display: block;
+
+            }
+
+            .hide-btn {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+
+            #s1 {
+                width: 100%;
+                height: 520px;
+                margin-bottom: 15px;
+            }
+
+
+
+            .img1 img {
+
+
+                width: 500px;
+                height: 250px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                margin-left: 60px;
+
+
+            }
+
+
+
+
+            #s2 {
+                width: 100%;
+                height: 1500px;
+                margin-bottom: 15px;
+
+
+            }
+
+
+            #left-side {
+                width: 100%;
+                height: 350px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-right: 15px;
+                background-color: rgb(119, 114, 114);
+
+
+                color: white;
+
+            }
+
+            .left-content {
+                width: 100%;
+                height: 400px;
+
+            }
+
+            .left-content h2 {
+
+                font-size: 60px;
+            }
+
+            #left-p {
+                width: 100%;
+                height: 400px;
+                font-size: 45px;
+                text-align: justify;
+                padding-top: 15px;
+
+
+            }
+
+            #right-side {
+                width: 100%;
+                height: 400px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+            }
+
+            .article {
+                background-size: 100% 300px;
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: top;
+
+                font-size: 40px;
+                color: aqua;
+
+            }
+
+            #p1 {
+                background-image: url(../img/project1.jpg);
+
+            }
+
+            #p2 {
+                background-image: url(../img/project2.jpg);
+
+            }
+
+            #p3 {
+                background-image: url(../img/project3.jpg);
+
+            }
+
+            #s3 {
+                width: 100%;
+                height: 620px;
+                margin-bottom: 15px;
+
+            }
+
+            .box {
+                width: 49%;
+                height: 600px;
+
+                background-color: rgb(199, 196, 191);
+                margin-bottom: 15px;
+                margin-top: 15px;
+                margin-left: 5px;
+
+
+            }
+
+
+
+
+            .box h2 {
+
+                font-size: 40px;
+                font-style: normal;
+                text-align: center;
+            }
+
+
+            .box img {
+                border-radius: 10px;
+                margin-top: 20px;
+                height: 30vh;
+
+
+            }
+
+            .box p {
+
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 30px;
+
+            }
+
+            .box a {
+                display: block;
+                background-color: red;
+                width: 80%;
+                height: 50px;
+                border-radius: 10px;
+                font-size: 30px;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-top: 5px;
+                margin: 20px auto;
+                text-decoration: none;
+
+            }
+
+            .box a:hover {
+                background-color: indigo;
+            }
+
+
+
+
+
+
+            #list {
+
+                width: 100%;
+                height: 100px;
+                background-color: plum;
+                margin-top: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 40px;
+                color: black;
+
+            }
+
+            #list ul {
+                list-style-type: none;
+
+            }
+
+            #f2 {
+                text-align: center;
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media(max-width: 625px) {
+            #container {
+                min-width: 320px;
+
+            }
+
+            h1 {
+                color: black;
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .show-btn,
+            .hide-btn {
+                display: block;
+
+            }
+
+
+            #menu {
+
+                position: fixed;
+                top: 0;
+                right: -100%;
+
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                text-align: center;
+                padding: 80px 0;
+                transition: .7s;
+                line-height: normal;
+
+
+            }
+
+            #chk:checked~#menu {
+                right: 0;
+            }
+
+
+
+
+            #menu li {
+                display: block;
+
+            }
+
+            #menu li a {
+                display: block;
+
+            }
+
+            .hide-btn {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+
+            #s1 {
+                width: 100%;
+                height: 1800px;
+                margin-bottom: 15px;
+            }
+
+
+
+            .img1 img {
+
+
+                width: 80%;
+                height: 400px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                margin-left: 90px;
+
+            }
+
+            #s2 {
+                width: 100%;
+                height: 1400px;
+                margin-bottom: 15px;
+
+
+            }
+
+
+            #left-side {
+                width: 100%;
+                height: 350px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-right: 15px;
+                background-color: rgb(119, 114, 114);
+
+
+                color: white;
+
+            }
+
+            .left-content {
+                width: 100%;
+                height: 400px;
+
+            }
+
+            .left-content h2 {
+
+                font-size: 60px;
+            }
+
+            #left-p {
+                width: 100%;
+                height: 400px;
+                font-size: 45px;
+                text-align: justify;
+                padding-top: 15px;
+
+
+            }
+
+            #right-side {
+                width: 100%;
+                height: 400px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+            }
+
+            .article {
+                background-size: 100% 300px;
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: top;
+
+                font-size: 40px;
+                color: aqua;
+
+            }
+
+            #p1 {
+                background-image: url(../img/project1.jpg);
+
+            }
+
+            #p2 {
+                background-image: url(../img/project2.jpg);
+
+            }
+
+            #p3 {
+                background-image: url(../img/project3.jpg);
+
+            }
+
+            #s3 {
+                width: 100%;
+                height: 1200px;
+                margin-bottom: 15px;
+
+            }
+
+
+
+
+            .box {
+                width: 98%;
+                height: 850px;
+
+                background-color: rgb(199, 196, 191);
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                margin-left: 5px;
+
+
+            }
+
+
+
+
+            .box h2 {
+
+                font-size: 40px;
+                font-style: normal;
+                text-align: center;
+            }
+
+
+            .box img {
+                border-radius: 10px;
+                margin-top: 20px;
+                height: 50vh;
+
+
+            }
+
+            .box p {
+
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 50px;
+
+            }
+
+            .box a {
+                display: block;
+                background-color: red;
+                width: 80%;
+                height: 70px;
+                border-radius: 10px;
+                font-size: 50px;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-top: 5px;
+                margin: 20px auto;
+                text-decoration: none;
+
+            }
+
+            .box a:hover {
+                background-color: indigo;
+            }
+
+
+            #list {
+
+                width: 100%;
+                height: 100px;
+                background-color: plum;
+                margin-top: 15px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 40px;
+                color: black;
+
+            }
+
+            #list ul {
+                list-style-type: none;
+
+            }
+
+            #f2 {
+                text-align: center;
+
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+    <div id="container">
+
+
+        <div id="header">
+
+            <input type="checkbox" id="chk">
+
+
+            <label for="chk" class="show-btn">
+
+                <i class='fa fa-bars'></i>
+
+
+            </label>
+
+            <ul id="menu">
+
+                <li> <a href="#">HOME </a> </li>
+                <li> <a href="#about">ABOUT US </a> </li>
+                <li> <a href="#team"> TEAM </a> </li>
+                <li><a href="#technologies">TECHNOLOGIES </a> </li>
+                <li><a href="#contact">CONTACT </a></li>
+
+
+                <label for="chk" class="hide-btn">
+
+                    <i class='fa fa-times'></i>
+                </label>
+
+
+            </ul>
+        </div>
+
+
+
+        <div id="banner">
+            <h2>
+                Practical-8
+            </h2>
+
+        </div>
+
+
+        <div id="s1">
+            <a name="team"></a>
+            <h1>
+                Team Members
+            </h1>
+            <div class="img1">
+                <img src="../img/face1.jpg">
+
+            </div>
+
+            <div class="img1">
+                <img src="../img/face2.jpg">
+            </div>
+
+            <div class="img1">
+                <img src="../img/face3.jpg">
+            </div>
+
+            <div class="img1">
+                <img src="../img/face4.jpg">
+            </div>
+
+        </div>
+
+        <div id="s2">
+            <a name="about"></a>
+            <h1>
+                About Us
+            </h1>
+            <div id="left-side">
+                <div class="left-content">
+                    <div>
+                        <h2>
+                            About Projects
+                        </h2>
+                        <p id="left-p">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perferendis amet
+                            consequuntur
+                            sunt, perspiciatis eos, eveniet accusantium dolorem rerum distinctio architecto
+                            doloribus
+                            ullam?
+                            Animi et commodi dolore minima dicta tenetur nam fuga, rerum voluptatem iure voluptas
+                            porro
+                            possimus nisi iusto nobis esse, odio illum assumenda ratione aperiam ab quod maxime
+                            impedit
+                            exercitationem? Quisquam molestiae impedit, veritatis ipsum corporis delectus error. Eum
+                            tempora
+                            illum eaque nisi officia facere reprehenderit a quod laborum deleniti assumenda aliquam,
+                            saepe
+                            temporibus, veritatis esse quas tenetur minus asperiores eos sunt ex fugit? Corporis,
+                            labore
+                            voluptatum magnam est tempore aut deserunt facere expedita quod iste excepturi nihil
+                            placeat
+                            nobis illo ex quo eveniet! Soluta nihil exercitationem inventore quo! Fugit rerum sed
+                            impedit
+                            ipsam praesentium consequatur perferendis odio illum distinctio, molestias nihil ipsum
+                            vel
+                            voluptatum commodi deleniti temporibus. Incidunt tempore tenetur consequatur? Tempora
+                            earum
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id="right-side">
+
+
+                <div class="article" id="p1"> project-1</div>
+                <div class="article" id="p2"> project-2</div>
+                <div class="article" id="p3"> project-3</div>
+
+            </div>
+
+
+        </div>
+
+        <div id="s3">
+            <a name="technologies"></a>
+            <h1>
+                Tecnologies Used
+            </h1>
+            <div id="d4" class="box">
+                <img src="../img/html.jpg" style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                <h2>
+                    Introduction to HTML
+                </h2>
+                <p align="justify">
+
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vel aspernatur? Voluptatum
+                    molestias quod
+                    delectus aspernatur id praesentium voluptas iste!
+                </p>
+
+                <a href="practical5-html.html">Read More</a>
+
+            </div>
+            <div id="d4" class="box">
+
+                <img src="../img/css.jpg" style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                <h2>
+                    Introduction to CSS
+                </h2>
+                <p align="justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vel aspernatur? Voluptatum
+                    molestias quod
+                    delectus aspernatur id praesentium voluptas iste!
+
+
+                </p>
+                <a href="practical5-css.html">Read More</a>
+
+
+            </div>
+            <div id="d4" class="box">
+                <img src="../img/jquery.jpg" style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                <h2>
+                    Introduction to JavaScript
+                </h2>
+                <p align="justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vel aspernatur? Voluptatum
+                    molestias quod
+                    delectus aspernatur id praesentium voluptas iste!
+                </p>
+                <a href="practical5-js.html">Read More</a>
+            </div>
+            <div id="d4" class="box">
+                <img src="../img/boot.jpg" style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                <h2>
+                    Introduction to Bootstrap
+                </h2>
+                <p align="justify">
+
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vel aspernatur? Voluptatum
+                    molestias quod
+                    delectus aspernatur id praesentium voluptas iste!
+                </p>
+                <a href="practical5-boot.html">Read More</a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="footer">
+            <a name="contact"></a>
+            <h1>
+                Contact
+            </h1>
+            <div id="list">
+
+
+
+                <ul>
+                    <li> Website template for practical-8 &#169
+                        <a href="https://www.beta-labs.in/">beta-labs </a>
+                    </li>
+                    <li id="f2">
+                        <a href="#"> Back to top</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
