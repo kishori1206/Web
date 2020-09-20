@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(216, 207, 207);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #upper {
+            text-align: center;
+            background-image: linear-gradient(to right,
+                    rgb(241, 124, 206),
+                    orange);
+
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+
+
+        }
+
+        i {
+            padding: 12px;
+            color: rgb(255, 255, 255);
+            font-size: larger;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(151, 145, 145);
+        }
+
+        #lower {
+            text-align: center;
+            background-color: rgb(240, 137, 200);
+            color: papayawhip;
+            height: 50px;
+            padding-top: 20px;
+        }
+
+        #input {
+            border-left: 0px;
+            border-right: 0px;
+            border-top: 0px;
+            width: 85%;
+            padding: 2px 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            margin-left: 30px;
+
+        }
+
+        #label {
+            margin-left: 30px;
+        }
+
+        #term {
+            margin-left: 30px;
+        }
+
+        .box {
+
+            width: 450px;
+            height: 390px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: white;
+            border-radius: 2px;
+
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        }
+
+
+        .box h2 {
+
+            font-size: medium;
+            font-style: normal;
+            text-align: center;
+        }
+
+
+
+        #heading {
+            font-size: 20px;
+            text-align: center;
+            color: rgb(236, 106, 171);
+
+
+
+        }
+
+
+        #pass {
+            float: right;
+            margin-right: 40px;
+        }
+
+        #signin {
+            text-align: center;
+        }
+
+        #signin a {
+            display: block;
+            background-image: linear-gradient(to right,
+                    violet,
+                    skyblue);
+            width: 80%;
+            height: 30px;
+            border-radius: 30px;
+            font-size: large;
+            color: seashell;
+            border: 0;
+            text-align: center;
+            padding-top: 5px;
+            margin: 20px auto;
+            text-decoration: none;
+
+        }
+
+        #icon a {
+            display: block;
+            background-color: rgb(250, 250, 253);
+            width: 15%;
+            height: 30px;
+            border-radius: 30px;
+            font-size: large;
+            color: seashell;
+            border: 0;
+            text-align: center;
+            padding-bottom: 10px;
+            float: left;
+            margin-bottom: 20px;
+            margin-left: 15%;
+            text-decoration: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        }
+
+        #icon i {
+            color: blue;
+        }
+
+        #link1 {
+            margin-left: 30px;
+            display: flex;
+            justify-content: end;
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        #link1 a {
+            display: block;
+
+            background-image: linear-gradient(to right,
+                    violet,
+                    orange);
+            width: 30%;
+            height: 30px;
+            border-radius: 30px;
+            font-size: large;
+            color: seashell;
+            border: 0;
+            text-align: center;
+            padding-top: 5px;
+            margin-left: 3px;
+            text-decoration: none;
+        }
+
+        #link2 {
+            margin-left: 30px;
+            float: right;
+            margin-right: 40px;
+
+        }
+
+        #d1 {
+            float: left;
+        }
+
+        #d2 {
+            float: left;
+        }
+
+        #d3 {
+            float: left;
+        }
+
+
+
+
+        @media(max-width: 800px) {
+            #upper {
+                text-align: center;
+                background-image: linear-gradient(to right,
+                        rgb(241, 124, 206),
+                        orange);
+
+                color: rgb(255, 255, 255);
+                padding-top: 0px;
+
+
+            }
+
+            i {
+                padding: 12px;
+                color: rgb(255, 255, 255);
+                font-size: larger;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(151, 145, 145);
+            }
+
+            #lower {
+                text-align: center;
+                background-color: rgb(240, 137, 200);
+                color: papayawhip;
+                height: 50px;
+                padding-top: 20px;
+            }
+
+            #input {
+                border-left: 0px;
+                border-right: 0px;
+                border-top: 0px;
+                width: 85%;
+                padding: 2px 0;
+                border-bottom: 1px solid #999;
+                outline: none;
+                margin-left: 30px;
+
+            }
+
+            #label {
+                margin-left: 30px;
+            }
+
+            #term {
+                margin-left: 30px;
+            }
+
+            .box {
+
+                width: 90%;
+                height: 390px;
+                margin-top: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                background-color: white;
+                border-radius: 2px;
+
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+            }
+
+
+            .box h2 {
+
+                font-size: medium;
+                font-style: normal;
+                text-align: center;
+            }
+
+
+
+            #heading {
+                font-size: 20px;
+                text-align: center;
+                color: rgb(236, 106, 171);
+
+
+
+            }
+
+
+            #pass {
+                float: right;
+                margin-right: 40px;
+            }
+
+            #signin {
+                text-align: center;
+            }
+
+            #signin a {
+                display: block;
+                background-image: linear-gradient(to right,
+                        violet,
+                        skyblue);
+                width: 80%;
+                height: 30px;
+                border-radius: 30px;
+                font-size: large;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-top: 5px;
+                margin: 20px auto;
+                text-decoration: none;
+
+            }
+
+            #icon a {
+                display: block;
+                background-color: rgb(250, 250, 253);
+                width: 15%;
+                height: 30px;
+                border-radius: 30px;
+                font-size: large;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-bottom: 10px;
+                float: left;
+                margin-bottom: 20px;
+                margin-left: 15%;
+                text-decoration: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+            }
+
+            #icon i {
+                color: blue;
+            }
+
+            #link1 {
+                margin-left: 30px;
+                display: flex;
+                justify-content: end;
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            #link1 a {
+                display: block;
+
+                background-image: linear-gradient(to right,
+                        violet,
+                        orange);
+                width: 30%;
+                height: 30px;
+                border-radius: 30px;
+                font-size: large;
+                color: seashell;
+                border: 0;
+                text-align: center;
+                padding-top: 5px;
+                margin-left: 3px;
+                text-decoration: none;
+            }
+
+            #link2 {
+                margin-left: 30px;
+                float: right;
+                margin-right: 40px;
+
+            }
+
+            #d1 {
+                float: left;
+            }
+
+            #d2 {
+                float: left;
+            }
+
+            #d3 {
+                float: left;
+            }
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color:white" align="center">
+        FORM TEMPLATES
+
+    </h1>
+
+    <div id="d1" class="box">
+
+
+
+        <div id="upper">
+            <h3>Log in</h3>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+        </div>
+        <br>
+
+        <div>
+            <label id="label" for="">Your email</label>
+            <input id="input" type="text">
+        </div>
+        <br>
+
+        <div>
+            <label id="label" for="input">Your password</label>
+            <input id="input" type="text">
+        </div>
+        <br>
+
+
+        <div id="pass">
+            Forgot
+            <a href="#">Password?</a>
+        </div>
+
+        <br>
+
+        <div id="link1">
+            <a href="#">LOG IN</a>
+        </div>
+        <div id="link2">
+            Don't have an account?
+            <a href="#">Sign Up</a>
+        </div>
+        <br>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div id="d2" class="box">
+        <div id="heading">
+            <h2>Sign up</h2>
+        </div>
+
+        <br>
+
+        <div>
+            <label id="label" for="">Your email</label>
+            <input id="input" type="text">
+        </div>
+        <br>
+
+        <div>
+            <label id="label" for="">Your password</label>
+            <input id="input" type="text">
+        </div>
+        <br>
+
+
+        <div id="term">
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-btn">
+
+            </label>
+            Accept the
+            <a href="#">Terms and Conditions</a>
+        </div>
+
+        <br>
+
+        <div id="link1">
+            <a href="#">Sign Up </a>
+        </div>
+        <div id="link2">
+            Have an account?
+            <a href="#">LOG IN</a>
+        </div>
+        <br>
+        <div id="lower">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="d3" class="box">
+        <div id="heading">
+            <h2>Sign in</h2>
+        </div>
+
+        <br>
+
+        <div>
+            <label id="label" for="">Your email</label>
+            <input id="input" type="text">
+
+        </div>
+        <br>
+
+        <div>
+            <label id="label" for="">Your password</label>
+            <input id="input" type="text">
+        </div>
+        <br>
+
+        <div id="pass">
+            Forgot
+            <a href="#">Password?</a>
+        </div>
+
+
+        <br>
+
+        <div id="signin">
+            <a href="#">Sign In </a>
+
+        </div>
+
+
+
+        <div id="signin">
+            or Sign in with
+
+        </div>
+        <br>
+        <div id="icon">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
