@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Counter</title>
+     <style>
+          body{
+               background: orange;
+          }
+          h1{
+               text-align: center;
+               color: rgb(241, 239, 233);
+               margin-top: 60px;
+               font-size: 40px;
+          }
+          button{
+               background-color:blueviolet;
+               /* color: black; */
+               width:40px;
+               height:40px;
+              margin:auto;
+              margin-left: 590px;
+              font-size: 30px;
+              text-decoration: none;
+              text-align: center;
+              cursor: pointer;
+          }
+          #btn2{
+               margin-left:75px;
+                         }
+          #main{
+               position: relative;
+               left:45px;
+               width:50px;
+               font-size: 30px;
+               font-weight: bold;
+               color:black
+
+               }
+          
+         
+     </style>
+</head>
+<body>
+     <h1>Counter</h1>
+     <button id ="btn1" onclick="sub()">-</button>
+     <span id="main">0</span>
+     <button id="btn2" onclick="add()">+</button>
+
+     <script>
+          var c=0;
+          var btn1 = document.getElementById("btn1");
+          btn1.disabled=true;
+          function sub(){
+               c=c-1;
+              if(c <= 0)
+               {
+                    btn1.disabled=true;
+               }
+               else{
+                    btn1.disabled=false;
+               }
+             
+               document.getElementById("main").innerHTML=c;
+               
+               console.log(c);
+               
+          }
+          function add(){
+               c=c+1;
+              
+               if(c <= 0)
+               {
+                    btn1.disabled=true;
+               }
+               else{
+                    btn1.disabled=false;
+               }
+               document.getElementById("main").innerHTML=c;
+               console.log(c);
+
+              
+               
+          }
+
+     </script>
+</body>
+</html>
